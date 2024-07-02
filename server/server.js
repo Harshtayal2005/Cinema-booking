@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const mongoSanitize = require('express-mongo-sanitize');
 const helmet = require('helmet');
 const xss = require('xss-clean');
-require('dotenv').config({path : './config.env'});
+require('dotenv').config({path : './.env'});
 
 const auth = require('./routes/auth');
 const cinema = require('./routes/cinema');
@@ -28,7 +28,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true })); // Allow requests from frontend
+app.use(cors({ origin: true, credentials: true })); // Allow requests from frontend
 app.use(mongoSanitize());
 app.use(helmet());
 app.use(xss());

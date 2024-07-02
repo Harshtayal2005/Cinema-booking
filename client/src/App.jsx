@@ -14,6 +14,7 @@ import Showtime from './pages/Showtime'
 import Tickets from './pages/Tickets'
 import User from './pages/User'
 
+
 axios.defaults.baseURL = 'http://localhost:4000'
 axios.defaults.withCredentials = true
 
